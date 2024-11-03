@@ -1,0 +1,19 @@
+.navbar {
+  height: 70px;
+  background: linear-gradient(40deg, rgba(129, 2, 255, 0.6), rgba(255, 8, 94, 0.01));
+}
+.nav-item {
+  margin: 0 10px; /* Space between items */
+  font-size: 20px;
+  font-weight: 400;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.nav-link {
+  line-height: 60px;
+  padding: 0 15px;
+  color: #fff;
+}
+.nav-link:active {
+  line-height: 60px;
+  padding: 0 15px;
+}
