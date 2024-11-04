@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, useLocation } from "react-router-dom"
-import logo from '../assets/img/favlogo.png'
+import logo from '../assets/img/logobw.png'
 
 export default function Navbar() {
   const location = useLocation();
@@ -30,7 +30,7 @@ export default function Navbar() {
             </li>
             <li className="nav-item">
               <Link 
-                className={`nav-link ${location.pathname === "/dextutils/about" ? "active" : ""}`} 
+                className={`nav-link ${location.pathname === "/about" ? "active" : ""}`} 
                 to="/about"
               >
                 README.md
