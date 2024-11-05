@@ -24,9 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-&l-vqn$i=hqyw2is4ca2#m63tg+k+vrupg+8zo6$36a9cw_7no"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['dextutils.onrender.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = []
+
 
 # Application definition
 
@@ -121,10 +122,9 @@ USE_TZ = True
 STATIC_URL = "/static/"
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "dexter-react/build/static"),  # For CSS, JS, media
-    os.path.join(BASE_DIR, "dexter-react/build"),  # For manifest.json and others
+    os.path.join(BASE_DIR, "dexter-react/build"),  # For CSS, JS, media
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")  # Optional, but recommended for production
-STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
