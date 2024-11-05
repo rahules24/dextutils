@@ -124,6 +124,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "dexter-react/build"),  # For manifest.json and others
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")  # Optional, but recommended for production
+STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
