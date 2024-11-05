@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-&l-vqn$i=hqyw2is4ca2#m63tg+k+vrupg+8zo6$36a9cw_7no
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://dextutils.onrender.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['dextutils.onrender.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
