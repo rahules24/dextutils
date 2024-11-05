@@ -1,20 +1,14 @@
 import './App.css';
 import About from './components/About';
 import Dexter from './components/Dexter';
-import {
-  HashRouter as Router,
-  Routes,
-  Route
-} from "react-router-dom";
+import { Routes, Route } from 'react-router-dom';  // Import Routes and Route
 
 function App() {
   return (
-    <Router>
-        <Routes>
-            <Route exact path="/about" element={<About />} />
-            <Route exact path="/" element={<Dexter />} />
-        </Routes>
-    </Router>
+    <Routes>  {/* Use Routes directly without Router here */}
+      <Route exact path="/" element={<Dexter />} />  {/* Home route */}
+      <Route exact path="/about" element={<About />} />  {/* About route */}
+    </Routes>
   );
 }
 
