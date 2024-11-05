@@ -1,0 +1,15 @@
+{
+    "builds": [
+      {
+        "src": "dexter-react/package.json",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "dexter-react/build"
+        }
+      }
+    ],
+    "routes": [
+      { "src": "/(.*)", "dest": "dexter-react/build/$1" }
+    ]
+  }
+  
