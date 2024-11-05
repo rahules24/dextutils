@@ -1,2 +1,5 @@
 Django==5.1.2
 gunicorn==23.0.0
+django-cors-headers==4.4.0
+packaging==21.3
+whitenoise==6.7.0

@@ -46,6 +46,7 @@ MIDDLEWARE = [
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
@@ -124,8 +125,13 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "dexter-react/build/static"),  # For CSS, JS, media
     os.path.join(BASE_DIR, "dexter-react/build"),  # For CSS, JS, media
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")  # Optional, but recommended for production
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
+STORAGES = {
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
