@@ -3,6 +3,7 @@ name: Ping Render API every 15 min
 on:
   schedule:
     - cron: '*/15 * * * *'
+  workflow_dispatch:
 
 jobs:
   ping:
@@ -13,5 +14,5 @@ jobs:
           echo "Pinging API..."
           curl -X POST https://dextutils.onrender.com/analyze \
             -H "Content-Type: application/json" \
-            -d '{"text":"ping"}'
+            -d '{"text":"ping"}' \
             -v
