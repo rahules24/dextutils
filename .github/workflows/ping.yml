@@ -1,0 +1,17 @@
+name: Ping Render API every 15 min
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Ping to Render App
+        run: |
+          echo "Pinging API..."
+          curl -X POST https://dextutils.onrender.com/analyze \
+            -H "Content-Type: application/json" \
+            -d '{"text":"ping"}'
+            -v
