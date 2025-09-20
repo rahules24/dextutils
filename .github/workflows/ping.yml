@@ -1,8 +1,8 @@
-name: Ping Render API every 15 min
+name: Ping Render API every hour (8am-11pm IST)
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '30 2-17 * * *'
   workflow_dispatch:
 
 jobs:
